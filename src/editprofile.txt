@@ -1,0 +1,29 @@
+const [name,setName] = useState(user.name);
+const [email,setEmail] = useState(user.email);
+const [mobile,setMobile] = useState(user.mobile);
+const [company,setCompany] = useState(user.company);
+const [role,setRole] = useState(user.role);
+const [street,setStreet] = useState(user.street);
+const [city,setCity] = useState(user.city);
+const [country,setCountry] = useState(user.country);
+const [zipcode,setZipcode] = useState(user.zipcode);
+const [image,setImage] = useState(user.avatar);
+
+console.log(setName);
+
+    return (
+        <div className="Formcontainer">
+            <h2>Edit profile</h2>
+            <TextField  className="inputbox" onChange={(event) => setName(event.target.value)} value={name}  id="standard-basic" label="Name" variant="standard" />
+            <TextField  className="inputbox" onChange={(event) => setEmail(event.target.value)} value={email} id="standard-basic" label="Email" variant="standard" />
+            <TextField  className="inputbox" onChange={(event) => setMobile(event.target.value)} value={mobile} id="standard-basic" label="Phone" variant="standard"/>
+            <TextField  className="inputbox" onChange={(event) => setCompany(event.target.value)} value={company} id="standard-basic" label="Company name" variant="standard"/>
+            <TextField  className="inputbox" onChange={(event) => setRole(event.target.value)} value={role} id="standard-basic" label="Job tiltle" variant="standard"/>
+            <TextField  className="inputbox" onChange={(event) => setStreet(event.target.value)} value={street} id="standard-basic" label="Street name" variant="standard"/>
+            <TextField  className="inputbox" onChange={(event) => setCity(event.target.value)} value={city} id="standard-basic" label="City" variant="standard"/>
+            <TextField  className="inputbox" onChange={(event) => setCountry(event.target.value)} value={country} id="standard-basic" label="Country" variant="standard"/>
+            <TextField  className="inputbox" onChange={(event) => setZipcode(event.target.value)} value={zipcode} id="standard-basic" label="Zipcode" variant="standard"/>
+            <TextField  className="inputbox" onChange={(event) => setImage(event.target.value)} value={image} id="standard-basic" label="Profile image url" variant="standard"/>
+            <Button type="submit" variant="contained">Edit Profile</Button>
+        </div>
+    )

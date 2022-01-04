@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+body{
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin: 0;
+}
+.App{
+    margin-top: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+    display: flex;
+    gap: 20px;
+    background: #1976d2;
+    padding: 20px;
+    margin: 0;
+}
+.nav li{
+    list-style: none;
+    
+}
+.nav a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+}
+ /* homepage */
+ .home-wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .home h1{
+     margin: 0;
+ }
+  /* total users list */
+
+
+.userlist{
+display: grid;
+grid-column-gap: 50px;
+grid-row-gap: 50px;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ justify-items: center;
+}
+.namebox{
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.5s ease;
+}
+.namebox:hover{
+    background-color: #0c0b5e3b;
+    transition: all 0.5s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.namebox img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+     /* user profile */
+
+.container{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+   
+    
+}
+.profilecard{
+    padding:10px 20px;
+    min-width: 320px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.imagecontainer{
+    text-align: center;
+}
+.imagecontainer img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid #b2bdf9;
+    transition: all 1.5s ease;
+}
+.imagecontainer img:hover{
+    transform: scale(1.1);
+}
+.info{
+    text-align: center;    
+}
+.info h1{
+    color:#005aff;
+    transition: all 1s ease-in-out;
+}
+.info h1:hover{
+    letter-spacing: 2px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.info p{
+    font-size: 20px;
+    transition: all 0.7s ease;
+}
+.info p:hover{
+    transform: scale(1.1);
+    letter-spacing: 1px;
+    cursor: pointer;
+   
+}
+.highlights{
+    font-weight: bold;
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+    /* adding user */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+    .Formcontainer{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .Formcontainer button{
+        width: 80%;
+    }
+    .inputbox{
+    width: 80%;
+    }
